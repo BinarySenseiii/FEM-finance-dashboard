@@ -3,6 +3,7 @@ import type {Metadata} from 'next'
 import './globals.css'
 
 import {sansFont} from '~/components/design-system/fonts'
+import {cn} from '~/lib/utils'
 import React from 'react'
 
 export const metadata: Metadata = {
@@ -18,8 +19,8 @@ export default function RootLayout({
   return (
     <html
       lang='en'
-      className={sansFont.variable}>
-      <body className={'antialiased bg-beige-100 font-sans'}>{children}</body>
+      className={cn('min-h-dvh', sansFont.variable)}>
+      <body className={'antialiased min-h-dvh bg-beige-100 font-sans'}>{children}</body>
     </html>
   )
 }
